@@ -138,11 +138,11 @@
 @media screen and (max-width: 728px){
     .container-geral{
         flex-direction: column-reverse;
+        height: auto;
     }
 
     .sessao-1, .sessao-2{
         width: 100%;
-        padding: 20px;
     }
 }
 
