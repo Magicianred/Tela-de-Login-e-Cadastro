@@ -144,5 +144,10 @@
     .sessao-1, .sessao-2{
         width: 100%;
     }
+
+    .sessao-1 .container, .sessao-2 form{
+        width: 90%;
+        max-width: 400px;
+    }
 }
 
