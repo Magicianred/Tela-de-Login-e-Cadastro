@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container-geral{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.sessao-1{
+    width: 45%; 
+    height: 100vh;
+    background-image:linear-gradient(rgba(0, 15, 59, 0.8), rgba(0, 46, 182,0.8)), url('../imagens/lobo4.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-1 .container{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sessao-1 .container h2{
+    color: white;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sessao-1 .container p{
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sessao-1 .container a{
+    color: white;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(255, 145, 0);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 40px;
+    transition: 200ms;
+}
+
+.sessao-2{
+    display: flex;
+    width: 55%;
+    height: 100vh;
+    background-color: rgb(243, 243, 243);
+    align-items: center;
+    justify-content: center;
+}
+
+.sessao-2 .container{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sessao-2 form{
+    width: 60%;
+}
+
+.sessao-2 form h2{
+    font-size: 1.8rem;
+    color: rgb(0, 46, 182);
+}
+
+.sessao-2 form h2 span{
+    font-weight: 300;
+}
+
+.sessao-2 form .input-container label{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: rgb(0, 46, 182);
+    display: inline-block;
+}
+
+.sessao-2 .input-container input{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.sessao-2 .input-container .input-submit{
+    width: 100%;
+    margin-top: 40px;
+    height: 40px;
+    background-color: rgb(255, 145, 0);
+    border: 0;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    transition: 200ms;
+    cursor: pointer;
+}
+
+.sessao-2 .container a{
+    margin-top: 20px;
+    color: rgb(0, 46, 182);
+    text-decoration: none;
+}
+
+.sessao-2 .input-container .input-submit:hover, .sessao-1 .container a:hover{
+    background-color: rgb(228, 129, 0);
+}
+
+.sessao-2 .container a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 728px){
+    .container-geral{
+        flex-direction: column-reverse;
+    }
+
+    .sessao-1, .sessao-2{
+        width: 100%;
+        padding: 20px;
+    }
+}
+
