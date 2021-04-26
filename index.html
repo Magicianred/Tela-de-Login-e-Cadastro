@@ -4,40 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <link href="css/style.css" rel="stylesheet">
   <title>Site</title>
 </head>
 <body>
-  <div class="container-geral">
-    <section class="sessao-1">
-      <div class="container">
-        <h2>Ainda não tem uma conta?</h2>
-        <p>Clique no botão abaixo e junte-se a nossa equipe!</p>
-        <a href="">Cadastre-se</a>
-      </div><!-- container -->
-    </section>
-  
-    <section class="sessao-2">
-      <div class="container">
-        <form>
-          <h2>Log <span>in</span></h2>
-          <div class="input-container">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu endereço de e-mail">
-          </div><!-- input-container -->
-
-          <div class="input-container">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
-          </div><!-- input-container -->
-
-          <div class="input-container">
-            <button class="input-submit" type="submit" value="Entrar">Entrar</button>
-          </div><!-- input-container -->
-        </form>
-        <a href="">Esqueceu a senha?</a>
+  <section class="main-section">
+    <div class="content-container">
+      <h2>Be part of our awesome team!</h2>
+       <div class="svg-container">
+        <img src="imagens/mountain.png" alt="" />
       </div>
-    </section>
-  </div>
+      <p><b>Are you already part of our team? </b><a href="#">Login</a></p>
+    </div>
+    <div class="form-container">
+      <form>
+        <h2>Join <span>Us</span></h2>
+        <div class="input-container">
+          <label>Full name</label>
+          <input type="text" placeholder="Type your full name" required />
+        </div>
+
+        <div class="input-container">
+          <label>Email</label>
+          <input type="text" placeholder="Type the email" required />
+        </div>
+
+        <div class="input-container">
+          <label>Password</label>
+          <input type="password" placeholder="Type the password" required />
+          <a href="#">Forget password?</a>
+        </div>
+
+        <div class="input-container">
+          <input type="checkbox" required />
+          <label class="checkbox-label">I agree as <span>Terms & Conditons</span></label>
+        </div>
+
+        <div class="input-container">
+          <button type="submit">Sign up</button>
+        </div>
+      </form>
+      <div class="arrow">
+        <i class="fas fa-arrow-down"></i>
+      </div>
+    </div>
+  </section>
+</body>
 </html>

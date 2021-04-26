@@ -2,152 +2,198 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
-.container-geral{
+:root {
+    --primary-color: #00E0C6;
+    --secondary-color: #2A3950;
+}
+
+.main-section {
     width: 100%;
-    height: 100vh;
-    display: flex;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
 }
 
-.sessao-1{
-    width: 45%; 
-    height: 100vh;
-    background-image:linear-gradient(rgba(0, 15, 59, 0.8), rgba(0, 46, 182,0.8)), url('../imagens/lobo4.jpg');
+.content-container, .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+.content-container {
+    color: white;
+    background-image: linear-gradient(rgba(4, 158, 158, 0.541), #000000b9 80%), url('../imagens/pexels-stijn-dijkstra-3265460.jpg');
     background-position: center;
     background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* background: linear-gradient( #009393, #016171); */
 }
 
-.sessao-1 .container{
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.sessao-1 .container h2{
-    color: white;
-    font-size: 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.sessao-1 .container p{
-    color: white;
-    font-size: 1.4rem;
-    margin-top: 20px;
+.content-container h2 {
+    font-size: 35px;
     font-weight: 300;
+    max-width: 280px;
     text-align: center;
 }
 
-.sessao-1 .container a{
+.content-container .svg-container {
+    width: min(100%, 240px);
+}
+
+.svg-container img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.content-container p {
     color: white;
-    width: 150px;
-    height: 40px;
-    background-color: rgb(255, 145, 0);
-    border-radius: 4px;
+    font-size: 17px;
+    margin-top: 80px;
+}
+
+.content-container p > a {
+    font-weight: 300;
+    color: white;
     text-decoration: none;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    text-align: center;
-    line-height: 40px;
-    transition: 200ms;
 }
 
-.sessao-2{
+.content-container p > a:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.form-container {
+    background: linear-gradient(45deg, #212E3F 60%, #384A62);
+}
+
+.content-container{
+    flex-flow: column;
+}
+
+.form-container .arrow{
+    display: none;
+    font-size: 35px;
+    color: white;
+}
+
+.form-container form{
+    width: min(100%, 450px);
     display: flex;
-    width: 55%;
-    height: 100vh;
-    background-color: rgb(243, 243, 243);
-    align-items: center;
+    flex-flow: column wrap;
     justify-content: center;
-}
-
-.sessao-2 .container{
-    width: 80%;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding: 20px;
+    color: white;
 }
 
-.sessao-2 form{
-    width: 60%;
+.form-container form h2{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.sessao-2 form h2{
-    font-size: 1.8rem;
-    color: rgb(0, 46, 182);
+.form-container form h2 span {
+    font-weight: normal;
 }
 
-.sessao-2 form h2 span{
-    font-weight: 300;
+.form-container .input-container{
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.sessao-2 form .input-container label{
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: rgb(0, 46, 182);
+.form-container .input-container label {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.input-container label.checkbox-label {
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.input-container label.checkbox-label span{
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-bottom: 1px solid white;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="password"]:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.input-container a{
+    text-decoration: none;
+    font-size: 14px;
+    color: rgb(126, 126, 126);
+    margin-top: 5px;
     display: inline-block;
 }
 
-.sessao-2 .input-container input{
-    width: 100%;
-    height: 35px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 3px;
-}
-
-.sessao-2 .input-container .input-submit{
-    width: 100%;
-    margin-top: 40px;
-    height: 40px;
-    background-color: rgb(255, 145, 0);
-    border: 0;
-    color: white;
-    font-size: 1.2rem;
-    border-radius: 3px;
-    transition: 200ms;
-    cursor: pointer;
-}
-
-.sessao-2 .container a{
-    margin-top: 20px;
-    color: rgb(0, 46, 182);
-    text-decoration: none;
-}
-
-.sessao-2 .input-container .input-submit:hover, .sessao-1 .container a:hover{
-    background-color: rgb(228, 129, 0);
-}
-
-.sessao-2 .container a:hover{
+.input-container a:hover{
     text-decoration: underline;
+    color:  rgb(192, 192, 192);
 }
 
-@media screen and (max-width: 728px){
-    .container-geral{
-        flex-direction: column-reverse;
-        height: auto;
+.input-container input::placeholder{
+    color: rgb(192, 192, 192);
+}
+
+.input-container button {
+    width: 50%;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.input-container button:hover {
+    transform: scale(1.03);
+    background-color: #02ac98;
+}
+
+@media screen and (max-width: 768px) {
+    .main-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
-    .sessao-1, .sessao-2{
+    .content-container, .form-container {
         width: 100%;
+        min-height: 100vh;
     }
 
-    .sessao-1 .container, .sessao-2 form{
-        width: 90%;
-        max-width: 400px;
+    .form-container {
+        grid-row: 1;
+    }
+
+    .form-container .arrow {
+        display: block;
     }
 }
-
